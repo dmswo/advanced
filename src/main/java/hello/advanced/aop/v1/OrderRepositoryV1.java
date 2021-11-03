@@ -7,14 +7,14 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
-public class OrderRepositoryV {
+public class OrderRepositoryV1 {
 
     private final HelloTraceV1 trace;
 
     public void save(String itemId) {
         TraceStatus status = null;
         try {
-            status = trace.begin("OrderRepositoryV.save()");
+            status = trace.begin("OrderRepository.save()");
 
             //저장 로직
             if (itemId.equals("ex")) {
