@@ -7,9 +7,9 @@ public abstract class AbstractTemplate {
 
     public void execute() {
         long startTime = System.currentTimeMillis();
-        //비즈니스 로직 실행
+        log.info("Start");
         call(); //상속
-        //비즈니스 로직 종료
+        log.info("End");
         long endTime = System.currentTimeMillis();
         long resultTime = endTime - startTime;
         log.info("resultTime={}", resultTime);
